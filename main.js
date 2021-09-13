@@ -161,3 +161,15 @@ const inventory = [
     sold: 8,
   },
 ];
+
+// Opdracht 1
+// alle originalStock optellen, alle sold er vanaf trekken
+// injecteren in html pagina, rode kleur meegeven in CSS
+
+function inStock() {
+  let sum = 0;
+  inventory.map(function(x){sum+=(x.originalStock-x.sold)})
+  return sum
+}
+const opdracht1 = document.getElementById("inStock");
+opdracht1.textContent += "Aantal te verkopen exemplaren: "+inStock().toString();
