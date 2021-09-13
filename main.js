@@ -206,3 +206,36 @@ console.log(ambiLight);
 
 inventory.sort((a, b) => a.price - b.price);
 console.log(inventory);
+
+// Opdracht 3a
+// maak een functie die loopt door alle tv's , bij elke tv wordt de prijs*Originalstock berekend
+// dit wordt allemaal opgeteld
+// deze som injecteren in de HTML
+// blauwe kleur geven in css
+function maxiProfit() {
+    let sum = 0;
+    inventory.map(function (tv) {
+        sum += (tv.originalStock * tv.price)
+    })
+    return sum;
+}
+const opdracht3a = document.getElementById("maxiProfit");
+opdracht3a.textContent += "Totale opbrengst: " + maxiProfit().toString();
+console.log(maxiProfit());
+// Opdracht3b
+// maak functie zoals hierboven met map
+// per tv wordt sold * price berekend
+// dit alles optellen
+// injecteren in de DOM
+// groen maken in CSS
+function earnt() {
+    let sum = 0;
+    inventory.map(function (tv) {
+        sum += (tv.sold * tv.price)
+    })
+    return sum;
+}
+console.log(earnt())
+const opdracht3b = document.getElementById("earnt");
+opdracht3b.textContent += "We hebben in totaal: " + earnt().toString()+" verdiend!";
+console.log(maxiProfit());
