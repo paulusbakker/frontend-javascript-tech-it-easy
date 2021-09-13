@@ -239,3 +239,7 @@ console.log(earnt())
 const opdracht3b = document.getElementById("earnt");
 opdracht3b.textContent += "We hebben in totaal: " + earnt().toString()+" verdiend!";
 console.log(maxiProfit());
+
+const tvTypeExample = document.getElementById("tvTypes");
+tvTypeExample.textContent += `Dit zij twee voorbeelden van tv types: ${inventory[1].type} en ${inventory[2].type} !`;
+// tvTypeExample.textContent += inventory[0].type + " " + inventory[2].type;
